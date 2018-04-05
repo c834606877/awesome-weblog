@@ -3,13 +3,10 @@
     <head>
     <meta charset="utf-8" />
         <!-- Win98, from themes.edada.ms -->
-    {% if page.title or page.title == 'me' %}
-        <title>{{ page.title }}</title>
+    
+        <title>me</title>
         <!-- <link rel="stylesheet" type="text/css" href="/assets/css/002.css"> -->
-    {% else %}
-        <title>{{ site.name }}</title>
-       <!--  <link rel="stylesheet" type="text/css" href="/assets/css/001.css"> -->
-    {% endif %}
+    
         <link rel="stylesheet" type="text/css" href="/assets/css/default2.css">
 
         <link rel="shortcut icon" href="/assets/img/favicon.ico" />
@@ -79,11 +76,9 @@
                 <div class='resizable window' style="width:800px;">
                   <div class='header'>
                     <img class='icon' src='/assets/img/mycomputer.png'  />
-                    {% if page.tag %}
-                            {{ page.tag }}
-                        {% else %}
-                            {{ site.name }}
-                    {% endif %}
+                    
+                            AweSome Personal Weblog Site
+                    
                     <div class='buttons'>
                       <button>_</button>
                       <button>&#9634;</button>
@@ -96,10 +91,14 @@
                         <ul id="tag-list">
                             <li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
                         <ul>
-                            {% assign tags = site.tags | sort %}
-                            {% for tag in tags %}
-                            <li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a></li>
-                            {% endfor %}
+                            
+                            
+                            <li><a href="/tag/sec/" title="sec"><img src="/assets/img/folder.ico" />sec</a></li>
+                            
+                            <li><a href="/tag/tag2/" title="tag2"><img src="/assets/img/folder.ico" />tag2</a></li>
+                            
+                            <li><a href="/tag/tag3/" title="tag3"><img src="/assets/img/folder.ico" />tag3</a></li>
+                            
                         </ul>
                             </li>
                         </ul>
@@ -107,27 +106,23 @@
                     <div class="post_list">
 
                             <ul>
-                                {% for post in site.tags[page.tag] %}
-                                <li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
-                                {% endfor %}
+                                
                             </ul>
 
                     </div>
                     <div class="post_total">
-                        {% if page.tag %}
-                            <div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
-                        {% else %}
-                            <div class="left">{{ site.posts | size }} object(s)</div>
-                        {% endif %}
+                        
+                            <div class="left">1 object(s)</div>
+                        
                         <div class="right">&nbsp;</div>
                     </div>
                   </div>
                 </div>
-{% if page.title %}
+
                 <div class='window' style="width:800px;">
                   <div class='header'>
                     <img class='icon' src='/assets/img/mycomputer.png'  />
-                            {{ page.title }}
+                            me
                     <div class='buttons'>
                     
                       <button><span class="fa fa-window-minimize"></span></button>
@@ -141,16 +136,17 @@
 
 
             <ul class="topbar">
-                <li>{{ page.date | date: '%B %-d, %Y' }}</li>
+                <li></li>
             </ul>
             <div class="post_content">
-                {{ content }}
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis placerat enim nec cursus. Ut et elit congue, facilisis dui id, efficitur velit. Integer faucibus velit varius arcu consectetur aliquam. Sed dui ante, euismod non malesuada vel, suscipit vel elit. Nullam tempor vehicula urna, sed dignissim ligula hendrerit in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et nisi eget nunc vehicula posuere. Nam elementum finibus auctor. Suspendisse a mauris et arcu molestie egestas sed et dolor. Nullam ut est tristique, iaculis tortor non, viverra felis. Praesent a tincidunt tellus, eget congue eros. Mauris non libero nec ipsum ultricies tincidunt sit amet nec ante. Duis molestie sem at ligula rhoncus viverra. Pellentesque sit amet tortor euismod, rhoncus lacus a, sodales odio. Proin ac convallis ipsum. Cras tincidunt mollis consequat.</p>
+
             </div>
 
 
                   </div><!-- content -->
                 </div>
-{% endif %}
+
                 
 
             </div>

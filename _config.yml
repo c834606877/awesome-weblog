@@ -1,10 +1,12 @@
-permalink: /:year:month:day/:title
+
 url: #Your url here
 baseurl: /
 
+permalink: /:slug/
+
 # variables
-name: Your Site Name
-description: Your description here
+name: AweSome Personal Weblog Site
+description: "Awesome blog collection - 优秀博客收集"
 google_verification: null
 
 
